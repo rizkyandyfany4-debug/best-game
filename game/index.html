@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LUMENFALL — Keeper of the Last Light</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #070912;
+    height: 100%;
+    overflow: hidden;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+  }
+  #game {
+    width: 960px;
+    height: 600px;
+    display: block;
+    background: #0b0e1e;
+    border: 1px solid rgba(255, 179, 71, 0.25);
+    border-radius: 8px;
+    cursor: crosshair;
+    image-rendering: auto;
+  }
+</style>
+</head>
+<body>
+<canvas id="game" width="960" height="600"></canvas>
+<script type="module">
+  import { boot } from './src/main.js';
+  boot(document.getElementById('game'));
+</script>
+</body>
+</html>
